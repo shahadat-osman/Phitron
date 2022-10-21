@@ -6,13 +6,13 @@ int main()
     scanf("%d%d%d", &a, &b, &c);
     if(a>0 && b>0 && c>0)
     {
-        if(a==b || b==c || a==c)
-        {
-            printf("This is an isosceles triangle.\n");
-        }
-        else if(a==b && b==c && c==a)
+        if(a==b && b==c && c==a)
         {
             printf("This is an Equilateral Triangle.\n");
+        }
+        else if(a==b || b==c || a==c)
+        {
+            printf("This is an isosceles Triangle.\n");
         }
         else
         {
