@@ -1,14 +1,14 @@
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
-
-int main() {
-
-    int x, y;
-    char ch1;
-    scanf(" %d %c", &x,&ch1);
-    scanf(" %d %c", &y,&ch1);
-    printf("%d%%", x*y);
+#include<stdio.h>
+int main()
+{
+    int a=0,i=0;
+    printf("4");
+    for (i=0; i<5; i++)
+    {
+        a+=1;
+        if (i==3)
+            break;
+    }
+    printf("%d\n",a);
     return 0;
 }
