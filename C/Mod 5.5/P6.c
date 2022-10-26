@@ -1,3 +1,5 @@
+/* Write a C program to take two non-negative integers N and M. Here N and M represents time in hours (24 hours format).
+You need to print from N to M, if you need to start from beginning again, you can do that. */
 #include<stdio.h>
 int main()
 {

@@ -1,3 +1,4 @@
+/* Write a C program to take one positive integer N as input and print all divisors of N. */
 #include<stdio.h>
 int main()
 {
