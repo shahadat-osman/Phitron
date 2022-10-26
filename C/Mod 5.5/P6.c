@@ -12,7 +12,7 @@ int main()
             printf("%d ", i);
         }
     }
-    else if(m<n)
+    else
     {
         for(i=n; i<24; i++)
         {
@@ -23,5 +23,6 @@ int main()
             printf("%d ", i);
         }
     }
+    
     return 0;
 }
