@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int i, n, m;
+
+    scanf("%d %d", &n, &m);
+    
+    if(n<m)
+    {
+        for(i=n; i<=m; i++)
+        {
+            printf("%d ", i);
+        }
+    }
+    else if(m<n)
+    {
+        for(i=n; i<24; i++)
+        {
+            printf("%d ", i);
+        }
+        for(i=0; i<=m; i++)
+        {
+            printf("%d ", i);
+        }
+    }
+    return 0;
+}
