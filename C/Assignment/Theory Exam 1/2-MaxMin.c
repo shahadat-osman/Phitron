@@ -5,15 +5,17 @@ int main()
 
     scanf("%d %d %d %d", &a, &b, &c, &d);
 
-    if(a>b && a>c && a>d || !(a>b && a>c && a>d))
+    if(a>b && a>c && a>d)
     {
         L=a;
-        S=a;
+        if(!(a>b && a>c && a>d))
+            S=a;
     }
-    else if(b>a && b>c && b>d || !(b>a && b>c && b>d))
+    else if(b>a && b>c && b>d)
     {
         L=b;
-        S=b;
+        if(!(b>a && b>c && b>d))
+            S=b;
     }
     else if(c>a && c>b && c>d)
     {
