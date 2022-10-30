@@ -11,6 +11,10 @@ int main()
         {
             gcd=i;
         }
+        else
+        {
+            gcd=1;
+        }
     }
     lcm=(x*y)/gcd;
     printf("The LCM of %d and %d is %d.\n",x, y, lcm);

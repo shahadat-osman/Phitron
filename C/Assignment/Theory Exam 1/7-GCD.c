@@ -11,6 +11,10 @@ int main()
         {
             gcd=i;
         }
+        else
+        {
+            gcd=1;
+        }
     }
     printf("The GCD of %d and %d is %d.\n",x, y, gcd);
 
