@@ -1,12 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int i=1;
+    int n=16;
 
-    while(i!=10)
+    while(n!=1)
     {
-        printf("Hello.\n");
-        i++;
+        if(n%2==0)
+        {n=n/2;}
+        else
+        {n=(n*3)+1;}
+
+        printf("%d\n", n);
     }
     return 0;
 }
