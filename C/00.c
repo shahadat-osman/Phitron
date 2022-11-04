@@ -1,16 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int n=16;
+    int i=1,n,w, sum=0;
+    scanf("%d", &n);
 
-    while(n!=1)
+    while(i<=n)
     {
-        if(n%2==0)
-        {n=n/2;}
-        else
-        {n=(n*3)+1;}
-
-        printf("%d\n", n);
+        scanf("%d", &w);
+        sum+=w;
+        i++;
     }
+    printf("%d\n", sum);
     return 0;
 }
