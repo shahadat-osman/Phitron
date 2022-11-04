@@ -1,28 +1,12 @@
 #include<stdio.h>
 int main()
 {
-    int a, b;
-    char choice;
+    int i=1;
 
-    scanf("%d %c %d", &a, &choice, &b);
-
-    switch(choice)
+    while(i!=10)
     {
-        case '+':
-            printf("%d\n", a+b);
-            break;
-        case '-':
-            printf("%d\n", a-b);
-            break;
-        case '*':
-            printf("%d\n", a*b);
-            break;
-        case '/':
-            printf("%d\n", a/b);
-            break;
-        case '%':
-            printf("%d\n", a%b);
-            break;
+        printf("Hello.\n");
+        i++;
     }
     return 0;
 }
