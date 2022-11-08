@@ -1,19 +1,34 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int a, b, c, d;
-
-    scanf("%d %d %d %d", &a, &b,&c, &d);
-
-    int state1=min(a,b);
-    int state2=min(c,d);
-    int state3=max(a,b);
-    int state4=max(c,d);
-
-    if(state1+state2<(state3+state4)/2)
-        printf("Yes\n");
+    int  n;
+    scanf("%d",&n);
+    if(n%2==0)
+    {
+        int num1,num2;
+        num1=(n/2);
+        num2=n;
+        for(int i=1; i<=(n/2); i++)
+        {
+            printf("%d %d ",num1,num2);
+            num1--;
+            num2--;
+        }
+        printf("\n");
+    }
     else
-        printf("No\n");
-
+    {
+        int num1,num2;
+        num1=(n/2)+1;
+        num2=n;
+        for(int i=1; i<=(n/2); i++)
+        {
+            printf("%d %d ",num1,num2);
+            num1--;
+            num2--;
+        }
+        printf("1\n");
+        //printf("\n");
+    }
+    return 0;
 }

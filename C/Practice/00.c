@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int a,b;
-    
-    printf("Enter Two numbers: ");
-    scanf("%d", &a);
-    scanf("%d", &b);
+    int ara[10], i;
 
-    printf("Sum= %d\n", a+b);
-    printf("Sub= %d\n", a-b);
-    printf("Multi= %d\n", a*b);
-    printf("Div= %d\n", a/b);
-    
+    for(i=0; i<5; i++)
+    {
+        scanf("%d", &ara[i]);
+
+    }
+    for(i=4; i>=0; i--)
+    {
+        printf("%d-->%d ",i, ara[i]);
+    }
     return 0;    
 }
