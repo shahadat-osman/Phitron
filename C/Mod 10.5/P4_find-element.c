@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,max, k, element, count=0;
+    int n, i, max, k, element, count=0;
     scanf("%d", &n);
     int ary[n];
     for(i=1; i<=n; i++)
@@ -35,5 +35,4 @@ int main()
         element=i;
     }
     printf("%d\n", element);
-
 }
