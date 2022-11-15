@@ -1,41 +1,37 @@
 #include<stdio.h>
 int main()
 {
-    int n, i, j=2, factor=0, prime[1000];
+    int n, i, j, total=0, flag=0, t=1;
     scanf("%d", &n);
-    int ary[n], element[n];
+    int ary[n], prime[n];
     for(i=1; i<=n; i++)
     {
         scanf("%d", &ary[i]);
     }
+
     for(i=1; i<=n; i++)
     {
-        do
+        flag=0;
+        for(j=2; j<=ary[i]/2; j++)
         {
             if(ary[i]%j==0)
             {
-                factor++;
+                flag=1;
+                break;
             }
-        } while (j<ary[i]/2);
-        j++;
-        if(factor>2)
-        {
-            prime[ary[i]]=0;
         }
-        else
+        if(flag==0)
         {
-            prime[ary[i]]=1;
+            total++;
+            prime[t]=ary[i];
+            t++;
         }
     }
-    for(i=1; i<=prime[1000]; i++)
+
+    printf("%d\n", total);
+
+    for(i=1; i<t; i++)
     {
-        for(j=1; j<=n; j++)
-        {
-            if(prime[i]==1)
-            {
-                element[j]=i;
-            }
-        }
+        printf("%d ", prime[i]);
     }
-    //printf("%d", total);
 }
