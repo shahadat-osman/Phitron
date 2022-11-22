@@ -1,34 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int  n;
-    scanf("%d",&n);
-    if(n%2==0)
+    int a[3][2], i, j;
+    for(i=0; i<3; i++)
     {
-        int num1,num2;
-        num1=(n/2);
-        num2=n;
-        for(int i=1; i<=(n/2); i++)
+        for(j=0; j<2; j++)
         {
-            printf("%d %d ",num1,num2);
-            num1--;
-            num2--;
+            scanf("%d", &a[i][j]);
+        }
+    }
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<2; j++)
+        {
+            printf("%d ", a[i][j]);
         }
         printf("\n");
-    }
-    else
-    {
-        int num1,num2;
-        num1=(n/2)+1;
-        num2=n;
-        for(int i=1; i<=(n/2); i++)
-        {
-            printf("%d %d ",num1,num2);
-            num1--;
-            num2--;
-        }
-        printf("1\n");
-        //printf("\n");
     }
     return 0;
 }
