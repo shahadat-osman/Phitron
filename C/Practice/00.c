@@ -1,16 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int ara[10], i;
-
-    for(i=0; i<5; i++)
+    char sent[1000];
+    int i=0, counter=0;
+    scanf("%s", sent);
+    while(sent[i]!='\0')
     {
-        scanf("%d", &ara[i]);
-
+        if(sent[i]=='a' || sent[i]=='e' || sent[i]=='i' || sent[i]=='o' || sent[i]=='u')
+            counter++;
+        i++;
     }
-    for(i=4; i>=0; i--)
-    {
-        printf("%d-->%d ",i, ara[i]);
-    }
-    return 0;    
+    printf("%d\n", counter);
 }
