@@ -16,13 +16,14 @@ int main()
         scanf("%d %d", &x, &y);
         mtrx[x][y]=1;
     }
+    printf("Total empty cells - %d\n", 9-r);
+
     for(i=1; i<=row; i++)
     {
         for(j=1; j<=colm; j++)
         {
-            printf("%d ", mtrx[i][j]);
+            if(mtrx[i][j]==0)
+                printf(" %d %d\n", i, j);
         }
-        printf("\n");
     }
-    
 }
