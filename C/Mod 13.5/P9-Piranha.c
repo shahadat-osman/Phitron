@@ -1,47 +1,40 @@
 #include<stdio.h>
 int main()
 {
-    int t, i, n, j, output, equal;
-    //scanf("%d", &t);
-    //for(i=0; i<t; i++)
-    //{
+    int t, i, n, j, index, max;
+    scanf("%d", &t);
+    int output[t];
+    for(i=1; i<=t; i++)
+    {
+        index=0;
         scanf("%d", &n);
         int ary[n];
-        for(i=0; i<n; i++)
+        for(j=1; j<=n; j++)
         {
-            scanf("%d", &ary[i]);
+            scanf("%d", &ary[j]);
         }
-        for(i=0; i<n-1; i++)
+        max=ary[1];
+        for(j=1; j<=n; j++)
         {
-            if(ary[0]==ary[i+1])
-                 equal++;
+            if(ary[j]>max)
+            max=ary[j];
         }
-        if(equal==n-1)
-            output=-1;
-        
+        for(j=1; j<=n; j++)
+        {
+            if(j==1 && ary[j]==max && ary[j]>ary[j+1])
+                index=j;
+            else if(j==n && ary[j]==max && ary[j]>ary[j-1])
+                index=j;
+            else if(j!=1 && j!=n && ary[j]==max && (ary[j]>ary[j-1] || ary[j]>ary[j+1]))
+                index=j;
+        }
+        if(index>0)
+            output[i]=index;
         else
-        
-
-        /* for(j=0; j<n-1; j++)
-        {
-            if(ary[0]==ary[j+1])
-            {
-                output=-1;
-            }
-            else 
-            {
-                int min=ary[0];
-                for(k=0; k<n; k++)
-                {
-                    if(ary[k]<min)
-                        min=ary[k];
-                }
-                for(k=0; k<n; k++
-                {
-                    if(ary[i     ])
-                }
-            }
-        } */
-    //}
-    printf("%d", output);
+            output[i]=-1;
+    }
+    for(i=1; i<=t; i++)
+    {
+        printf("%d\n", output[i]);
+    }
 }

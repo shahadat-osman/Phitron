@@ -1,14 +1,40 @@
 #include<stdio.h>
 int main()
 {
-    char sent[1000];
-    int i=0, counter=0;
-    scanf("%s", sent);
-    while(sent[i]!='\0')
+    int t, i, n, j, index, max;
+    scanf("%d", &t);
+    int output[t];
+    for(i=1; i<=t; i++)
     {
-        if(sent[i]=='a' || sent[i]=='e' || sent[i]=='i' || sent[i]=='o' || sent[i]=='u')
-            counter++;
-        i++;
+        index=0;
+        scanf("%d", &n);
+        int ary[n];
+        for(j=1; j<=n; j++)
+        {
+            scanf("%d", &ary[j]);
+        }
+        max=ary[1];
+        for(j=1; j<=n; j++)
+        {
+            if(ary[j]>max)
+            max=ary[j];
+        }
+        for(j=1; j<=n; j++)
+        {
+            if(j==1 && ary[j]==max && ary[j]>ary[j+1])
+                index=j;
+            else if(j==n && ary[j]==max && ary[j]>ary[j-1])
+                index=j;
+            else if(j!=1 && j!=n && ary[j]==max && (ary[j]>ary[j-1] || ary[j]>ary[j+1]))
+                index=j;
+        }
+        if(index>0)
+            output[i]=index;
+        else
+            output[i]=-1;
     }
-    printf("%d\n", counter);
+    for(i=1; i<=t; i++)
+    {
+        printf("%d\n", output[i]);
+    }
 }

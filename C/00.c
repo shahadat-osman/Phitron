@@ -1,21 +1,41 @@
 #include<stdio.h>
 int main()
 {
-    int a[3][2], i, j;
-    for(i=0; i<3; i++)
+    int t;
+    scanf("%d",&t);
+    while(t--)
     {
-        for(j=0; j<2; j++)
+        int n,i,count=0;
+        scanf("%d",&n);
+        int A[n];
+        for(i=0; i<n; i++)
+            scanf("%d",&A[i]);
+        int max=A[0];
+        for(i=1; i<n; i++)
         {
-            scanf("%d", &a[i][j]);
+            if(max<A[i])
+                max=A[i];
         }
-    }
-    for(i=0; i<3; i++)
-    {
-        for(j=0; j<2; j++)
+        for(i=0;i<n;i++)
         {
-            printf("%d ", a[i][j]);
+            if(A[i]==max && i==0 && A[i]>A[i+1])
+            {
+                count=i+1;
+            }
+            else if(A[i]==max && i!=0 && i!=n-1 && (A[i]>A[i-1] || A[i]>A[i+1]))
+            {
+                count=i+1;
+            }
+            else if(A[i]==max && i==n-1 && A[i-1]<A[i])
+            {
+                count=i+1;
+            }
+            if(count>0)
+                break;
         }
-        printf("\n");
+        if(count>0)
+            printf("%d\n",count);
+        else
+            printf("-1\n");
     }
-    return 0;
 }
