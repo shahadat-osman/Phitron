@@ -22,6 +22,7 @@ int main()
     }
     for(i=0; i<count; i++)
     {
+        max=0;
         for(j=0; j<26; j++)
         {
             if(m_a[j]>max)
@@ -37,7 +38,6 @@ int main()
         }
         m_a[index]=0;
         index=0;
-        max=0;
     }
     printf("\n");
     return 0;
