@@ -6,15 +6,17 @@ int main()
     scanf("%d", &n);
     int m_array[n];
 
-    for(i=1; i<=n; i++)
+    for(i=0; i<n; i++)
     {
         scanf("%d", &m_array[i]);
     }
-    for(i=n, j=n; i>0; j++, i--)
+    for(i=0, j=n-1; i<n/2; i++, j--)
     {
-        m_array[j]=m_array[i];
+        int temp=m_array[i];
+        m_array[i]=m_array[j];
+        m_array[j]=temp;
     }
-    for(i=n; i<n+n; i++)
+    for(i=0; i<n; i++)
     {
         printf("%d ", m_array[i]);
     }
