@@ -7,14 +7,17 @@ int main()
     
     char str[n];
     scanf("%s", str);
-    int max=0;
-    for(i=0; i<=strlen(str)-2; i++)
+    
+    int max=0, len=strlen(str);
+    for(i=0; i<=len-2; i++)
     {
         if(str[i]==str[i+1])
             count++;
-        else if(count>max)
+        else
         {
-            max=count;
+            if(count>max)
+                max=count;
+
             count=1;
         }
     }

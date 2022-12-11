@@ -4,16 +4,16 @@
 int main()
 {
     int t, i, j, flag=0;
-    char str[25];
+    char word[25];
     scanf("%d", &t);
     while(t--)
     {
-        scanf("%s", str);
-        int len=strlen(str)-1;
-        for(i=0, j=len; i<len; i++, j--)
+        scanf("%s", word);
+        int len=strlen(word);
+        for(i=0, j=len-1; i<len; i++, j--)
         {
             flag=0;
-            if(str[i]==str[j])
+            if(word[i]==word[j])
                 flag=1;
             else
             {
@@ -26,11 +26,11 @@ int main()
         }
         else if(flag==1 && len>7)
         {
-            printf("Case #2: %c%d%c\n", str[0], len-1, str[len]);
+            printf("Case #2: %c%d%c\n", word[0], len-2, word[len-1]);
         }
-        else if(flag==1)
+        else if(flag==1 && len<=7)
         {
-            printf("Case #3: %s\n", str);
+            printf("Case #3: %s\n", word);
         }
     }
 }

@@ -10,7 +10,10 @@
 			"stdio.h": "c",
 			"algorithm": "c",
 			"string": "c",
-			"iosfwd": "c"
+			"iosfwd": "c",
+			"chrono": "c",
+			"limits": "c",
+			"ratio": "c"
 		}
 	}
 }
