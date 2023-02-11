@@ -1,25 +1,36 @@
 #include <stdio.h>
 int main()
 {
-    int m, n;
+    int day;
 
-    printf("Input two number: ");
-    scanf("%d %d", &m, &n);
+    printf("Input a Day Number: ");
+    scanf("%d", &day);
 
-    if (m > 0 && n > 0)
-        printf("The coordinate point(%d, %d) lies in the First quadrant.\n", m, n);
-
-    if (m < 0 && n > 0)
-        printf("The coordinate point(%d, %d) lies in the Second quadrant.\n", m, n);
-
-    if (m < 0 && n < 0)
-        printf("The coordinate point(%d, %d) lies in the Third quadrant.\n", m, n);
-
-    if (m > 0 && n < 0)
-        printf("The coordinate point(%d, %d) lies in the Fourth quadrant.\n", m, n);
-    
-    else
-        printf("The coordinate point(%d,%d) lies at the origin.\n", m, n);
-
+    switch(day)
+    {
+        case 1:
+            printf("Saturday\n");
+            break;
+        case 2:
+            printf("Sunday\n");
+            break;
+        case 3:
+            printf("Monday\n");
+            break;
+        case 4:
+            printf("Tuesday\n");
+            break;
+        case 5:
+            printf("Wednesday\n");
+            break;
+        case 6:
+            printf("Thursday\n");
+            break;
+        case 7:
+            printf("Friday\n");
+            break;
+        default:
+            printf("Wrong Input\n");
+    }
     return 0;
 }

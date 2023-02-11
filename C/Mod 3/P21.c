@@ -1,42 +1,36 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
     int day;
 
-    printf("Enter Day Number: ");
+    printf("Input a Day Number: ");
     scanf("%d", &day);
 
-    if(day==1)
+    switch(day)
     {
-        printf("Monday\n");
-    }
-    else if(day==2)
-    {
-        printf("Tuesday\n");
-    }
-    else if(day==3)
-    {
-        printf("Wednesday\n");
-    }
-    else if(day==4)
-    {
-        printf("Thursday\n");
-    }
-    else if(day==5)
-    {
-        printf("Friday\n");
-    }
-    else if(day==6)
-    {
-        printf("Saturday\n");
-    }
-    else if(day==7)
-    {
-        printf("Sunday\n");
-    }
-    else
-    {
-        printf("Wrong Input\n");
+        case 1:
+            printf("Saturday\n");
+            break;
+        case 2:
+            printf("Sunday\n");
+            break;
+        case 3:
+            printf("Monday\n");
+            break;
+        case 4:
+            printf("Tuesday\n");
+            break;
+        case 5:
+            printf("Wednesday\n");
+            break;
+        case 6:
+            printf("Thursday\n");
+            break;
+        case 7:
+            printf("Friday\n");
+            break;
+        default:
+            printf("Wrong Input\n");
     }
     return 0;
 }

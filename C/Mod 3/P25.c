@@ -2,9 +2,9 @@
 int main()
 {
     int choice, a, b;
-    printf("Press '1' for Circle Area\n");
-    printf("Press '2' for Rectangle Area\n");
-    printf("Press '3' for Triangle Area\n");
+    printf("Input '1' for Circle Area\n");
+    printf("Input '2' for Rectangle Area\n");
+    printf("Input '3' for Triangle Area\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
 
@@ -29,7 +29,7 @@ int main()
         break;
 
         default:
-        printf("Wrong Choice.\n");
+        printf("Wrong Input.\n");
     }
     return 0;
 }
