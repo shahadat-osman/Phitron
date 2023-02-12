@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n, i, flag=0, m;
+    int n, i, flag=0;
     scanf("%d", &n);
     int ary[n];
     for(i=1; i<=n; i++)
