@@ -28,11 +28,11 @@ int main()
     }
     for(i=1; i<=max; i++)
     {   
-        if(count==k)
-            break;
         if(alist[i]!=0)
             count++;
         element=i;
+        if(count==k)
+            break;
     }
     printf("%d\n", element);
 }

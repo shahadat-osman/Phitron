@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n, i, j, total=0, flag=0, t=1;
+    int n, i, j, total=0, flag, t=1;
     scanf("%d", &n);
     int ary[n], prime[n];
     for(i=1; i<=n; i++)

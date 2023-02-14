@@ -1,31 +1,36 @@
 #include <stdio.h>
 int main()
 {
-    int n, i, j, target, flag=0;
+    int n, i, j, k=1, count=0, element=0;
     scanf("%d", &n);
-    int Alist[n];
-    for(i=0; i<n; i++)
+    int ary[n];
+    int total[n];
+    for(i=1; i<=n; i++)
     {
-       scanf("%d", &Alist[i]);
+        scanf("%d", &ary[i]);
     }
-    int max=Alist[0];
-    for(i=0; i<n; i++)
+    for(i=1; i<=n; i++)
     {
-        if(Alist[i]>max)
-            max=Alist[i];
+        count = 0;
+        for(j=2; j<=ary[i]/2; j++)
+        {
+            if(ary[i]%j==0)
+            {
+                count=1;
+                break;
+            }
+        }
+        if(count==0)
+        {
+            element++;
+            total[k]=ary[i];
+            k++;
+        }
     }
-    int Blist[max];
-    for(i=0; i<=max; i++)
+    printf("%d\n", element);
+    for(i=1; i<k; i++)
     {
-        Blist[i]=0;
+        printf("%d ", total[i]);
     }
-    for(i=0; i<n; i++)
-    {
-        Blist[Alist[i]]=1;
-    }
-    for(i=0; i<=max; i++)
-    {
-        if(Blist[i]==1)
-            printf("%d ", i);
-    }
+    
 }
