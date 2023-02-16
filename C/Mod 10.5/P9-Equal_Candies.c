@@ -15,13 +15,6 @@ int main()
             scanf("%d", &ary[j]);
         }
 
-        int max=ary[1];
-        for(j=1; j<=n; j++)
-        {
-            if(ary[j]>max)
-                max=ary[j];
-        }
-
         min=ary[1];
         for(j=1; j<=n; j++)
         {

@@ -15,12 +15,7 @@ int main()
                 m_a[j]++;
         }
     }
-    for(i=0; i<26; i++)
-    {
-        if(m_a[i]!=0)
-            count++;
-    }
-    for(i=0; i<count; i++)
+    for(i=0; i<strlen(sent); i++)
     {
         max=0;
         for(j=0; j<26; j++)
