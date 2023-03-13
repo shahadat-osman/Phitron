@@ -8,11 +8,11 @@ int main()
         scanf("%d", &n);
         int ary[n], select;
 
-        for (i = 0; i < n; i++)
+        for (i = 1; i <= n; i++)
         {
             ary[i] = i + 1;
         }
-        for (i = 0; i < n; i++)
+        for (i = 1; i <= n; i++)
             printf("%d ", ary[i]);
         printf("\n");
     }
