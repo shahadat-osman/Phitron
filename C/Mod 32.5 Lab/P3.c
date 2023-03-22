@@ -1,16 +1,16 @@
 #include<stdio.h>
-void solve(int i, int n)
+void solve(int n)
 {
-    if(i>n)
+    if(n==0)
         return;
-    printf("%d\n", i);
-    solve(i+1, n);
+    solve(n-1);
+    printf("%d ", n);
 }
 int main()
 {
     int n;
     scanf("%d", &n);
-    solve(1, n);
+    solve(n);
 
     return 0;
 }
