@@ -16,7 +16,8 @@
 			"ratio": "c",
 			"iostream": "cpp",
 			"ios": "cpp",
-			"vector": "cpp"
+			"vector": "cpp",
+			"ostream": "cpp"
 		}
 	}
 }
