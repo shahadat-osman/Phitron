@@ -3,7 +3,7 @@ using namespace std;
 
 /* 
     Time complexity O(2^n)
-    Memory complexity O()
+    Memory complexity O(n)
 */
 int called =0;
 int fib(int n)
@@ -28,7 +28,5 @@ int main()
     cout<<"Fib - "<<fib(n)<<"\n";
     cout<<called<<"\n";
     
-    
-
     return 0;
 }

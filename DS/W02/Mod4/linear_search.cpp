@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
+using namespace std;
+
 /* 
     Time complexity O(2^n)
     Memory complexity O()
 */
-using namespace std;
 int main()
 {
     int n;
