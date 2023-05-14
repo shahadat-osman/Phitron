@@ -76,7 +76,7 @@ public:
     {
         if (sz == 0)
         {
-            cout << "Current size is \n";
+            cout << "Current size is 0\n";
             return;
         }
         sz--;
