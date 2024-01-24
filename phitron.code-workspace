@@ -17,7 +17,9 @@
 			"iostream": "cpp",
 			"ios": "cpp",
 			"vector": "cpp",
-			"ostream": "cpp"
+			"ostream": "cpp",
+			"map": "cpp",
+			"queue": "cpp"
 		}
 	},
 	"launch": {
